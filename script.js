@@ -4,11 +4,10 @@ let masha = { name: "Маша", surname: "Петрова", id: 3 };
 
 let users = [vasya, petya, masha];
 
-let usersMapped = users.map((value, index) => {
-    let fullName = value.name + " " + value.surname;
-    let id = index + 1;
-    return { fullName, id };
-});
+let usersMapped = users.map( value=> ({
+    "fullName": value.name + " " + value.surname,
+          "id": value.id,
+}));
 
 /*
 usersMapped = [
